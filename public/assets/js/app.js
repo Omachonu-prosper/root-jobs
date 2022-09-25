@@ -7,11 +7,12 @@ function confirmPassword() {
 
     // Password Match or Mismatch
     if(password.value === confirmationPassword.value) {
+      password.setCustomValidity('');
       confirmationPassword.setCustomValidity('');
     } 
     else {
-      confirmationPassword.setCustomValidity('invalid');
-    }
+      password.setCustomValidity('invalid');
+      confirmationPassword.setCustomValidity('invalid');    }
   } 
   else {
     return;
@@ -41,62 +42,3 @@ function confirmPassword() {
     });
   }, false);
 })();
-
-function deleteTask(element, event) {
-  let confirmDelete = document.querySelector('#confirm-delete');
-  let deleteTaskId = document.querySelector('#delete-task-id');
-  deleteTaskId.value = element.dataset.id;
-
-  // Show the confirmation box
-  confirmDelete.classList.add('shown');
-  confirmDelete.classList.remove('hidden');
-
-  // Listen for a click outside the box to close it
-  confirmDelete.addEventListener('click', (e) => {
-    if(e.target.id === 'confirm-delete') {
-      // Close the box
-      confirmDelete.classList.remove('shown');
-      confirmDelete.classList.add('hidden');      
-    } else if (e.target.id === 'cancel') {
-      // Close the box
-      confirmDelete.classList.remove('shown');
-      confirmDelete.classList.add('hidden');
-    }
-  })
-
-  return
-}
-
-function editTask(element, event) {
-  event.preventDefault();
-  let editDialogue = document.querySelector('#edit-dialogue');
-  let editTaskInput = document.querySelector('#edit-task-title');
-  // Get the particular task title
-  let previousTaskTitle = element.parentElement.parentElement.previousElementSibling.firstElementChild.innerText
-  let editTaskIdInput = document.querySelector('#edit-task-id');
-
-  // Show the confirmation box
-  editDialogue.classList.add('shown');
-  editDialogue.classList.remove('hidden');
-
-  // Fill the input field with the tasks title
-  editTaskInput.value = previousTaskTitle;
-  // Set the id of the task to be updated
-  editTaskIdInput.value = element.dataset.id;
-
-  // Listen for a click outside the box to close it
-  editDialogue.addEventListener('click', (e) => {
-    if(e.target.id === 'edit-dialogue') {
-      // Close the box
-      editDialogue.classList.remove('shown');
-      editDialogue.classList.add('hidden');
-    } 
-    else if (e.target.id === 'cancel') {
-      // Close the box
-      editDialogue.classList.remove('shown');
-      editDialogue.classList.add('hidden');
-    }
-  })
-
-  return
-}

@@ -1,0 +1,29 @@
+/* Root style variables */
+:root {
+    --primary-color: #1e7e34;
+}
+
+.green-text {
+    color: var(--primary-color);
+}
+
+.green-border {
+    border-color: var(--primary-color) !important;
+}
+
+a:hover {
+    color:  var(--primary-color);
+}
+
+/*Change the focus effect on all forms*/
+.custom-control-input:focus~.custom-control-label::before,
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgb(72 180 97 / 50%);
+}
+
+/* Change styles on custom radio buttons */
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
