@@ -6,15 +6,23 @@
 				<div class="card-body">
 					<h1 class="display-4 text-center green-text">Login <i class="fa fa-user-circle-o"></i></h1>
 
-					<form action="" method="post">
+					<form action="" method="post" class="needs-validation" novalidate>
 						<div class="form-group">
 							<label for="email">Email</label>
 							<input type="email" class="form-control" id="email" placeholder="johndoe@example.com" required name="login_form_email">
+
+							<div class="invalid-feedback">
+								Please provide a valid email
+							</div>
 						</div>
 
 						<div class="form-group">
 							<label for="password">Password</label>
 							<input type="password" class="form-control" id="password" placeholder="Your Password" required name="login_form_password">
+
+							<div class="invalid-feedback">
+								Please enter the password for your account
+							</div>
 						</div>
 
 						<button type="submit" name="login_form_submit" class="btn btn-success">Submit</button>
