@@ -6,7 +6,7 @@
 				<div class="card-body">
 					<h1 class="display-4 text-center green-text">Login <i class="fa fa-user-circle-o"></i></h1>
 
-					<form action="" method="post" class="needs-validation" novalidate>
+					<form action="../../controller/auth/login.php" method="post" class="needs-validation" novalidate>
 						<div class="form-group">
 							<label for="email">Email</label>
 							<input type="email" class="form-control" id="email" placeholder="johndoe@example.com" required name="login_form_email">
