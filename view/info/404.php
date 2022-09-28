@@ -1,4 +1,7 @@
-<?php include_once '../templates/header.php' ?>
+<?php 
+	$page_title = '404 not Found - Root Jobs';
+	include_once '../templates/header.php'
+?>
 
 	<div class="mx-auto p-3" style="max-width:50rem">
 		<h1 class="display-1">

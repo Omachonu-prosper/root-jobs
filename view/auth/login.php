@@ -1,5 +1,7 @@
-<?php include_once '../templates/header.php' ?>
-
+<?php 
+	$page_title = 'Login - Root Jobs';
+	include_once '../templates/header.php'
+?>
 	<div class="p-3">
 		<div class="mx-auto mt-5" style="max-width: 30rem;">
 			<div class="card green-border">
