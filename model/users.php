@@ -16,6 +16,19 @@ class Users extends Connection {
 						'password' => $password,
 						'email' => $email
 					]);
+
+		// Return the id of the last inserted row
+		return $this->conn->lastInsertId();
+	}
+
+	public function getUser($email, $password) {
+		$sql = "SELECT * FROM users WHERE password = :password AND email = :email";
+		$stmt = $this->conn->prepare($sql);
+		$stmt->execute([
+						'password' => $password,
+						'email' => $email
+					]);
+		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
 	public function allUsers() {
