@@ -44,10 +44,6 @@
 								<input type="radio" id="customRadioInline2" name="signup_form_userrole" class="custom-control-input" value="employee" required>
 								<label class="custom-control-label" for="customRadioInline2">I want to be hired</label>
 							</div>
-
-							<div class="invalid-feedback">
-							    You must select one role
-						    </div>
 						</div>
 
 						<div class="form-group">
