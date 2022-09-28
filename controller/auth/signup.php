@@ -1,4 +1,6 @@
 <?php 
+require_once '../../model/users.php';
+
 // Page is accessed from signup page
 if(isset($_POST['signup_form_submit'])) {
 	$user = [
@@ -9,7 +11,16 @@ if(isset($_POST['signup_form_submit'])) {
 		"password" => $_POST['signup_form_password']
 	];
 
-	print_r($user);
+	$users_instance = new Users('../../root-jobs.db');
+	$users_instance->newUser(
+						$user['fullname'],
+						$user['username'],
+						$user['userrole'],
+						$user['password'],
+						$user['email']
+					);
+
+	header('location: /');
 }
 else {
 	// Redirect to 404 page
