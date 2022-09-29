@@ -27,7 +27,7 @@ if(isset($_POST['signup_form_submit'])) {
 	$_SESSION['current_user'] = $user;
 	$_SESSION['current_user']['id'] = $user_id;
 
-	header('location: /view/user/dashboard.php');
+	header('location: /view/user/account.php');
 }
 else {
 	// Redirect to 404 page

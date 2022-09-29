@@ -16,7 +16,7 @@ if(isset($_POST['login_form_submit'])) {
 		// Create a session value for them so they can access all resources authorised for them
 		$_SESSION['current_user'] = $user;
 
-		header('location: /view/user/dashboard.php');
+		header('location: /view/user/feed.php');
 	}
 	else {
 		// Keep the user on the login page but send back an error and the email they entered do they can use correct credentials
