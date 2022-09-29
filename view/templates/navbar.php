@@ -20,9 +20,9 @@
         			<i class="fa fa-user-circle"></i> <?php if(CURRENT_PAGE == 'account') echo '<span class="sr-only">(current)</span>' ?>
         		</a>
         		<div class="dropdown-menu pull-dropdown-leftward green-border" aria-labelledby="navbarDropdown">
-          			<a class="dropdown-item" href="#">Settings</a>
+          			<a class="dropdown-item" href="/view/user/account.php">Settings</a>
           			<div class="dropdown-divider"></div>
-          			<a class="dropdown-item" href="#">Logout</a>
+          			<a class="dropdown-item" href="/controller/auth/logout.php">Logout</a>
         		</div>
       		</li>
 	    </ul>

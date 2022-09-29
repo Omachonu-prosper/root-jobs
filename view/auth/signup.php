@@ -23,7 +23,7 @@
 							<input type="text" class="form-control" id="username" placeholder="johndoe123" required name="signup_form_username" minlength="5" maxlength="20">
 
 							<div class="invalid-feedback">
-							    Username cannot be between 5 to 20 characters
+							    Username must be between 5 to 20 characters
 						    </div>
 						</div>
 

@@ -31,6 +31,17 @@ class Users extends Connection {
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
+	public function updateUser($fullname, $username, $email, $id) {
+		$sql = "UPDATE users SET username = :username, email = :email, fullname = :fullname WHERE id = :id";
+		$stmt = $this->conn->prepare($sql);
+		$stmt->execute([
+					'fullname' => $fullname,
+					'username' => $username,
+					'email' => $email,
+					'id' => $id
+				]);
+	}
+
 	public function allUsers() {
 		$sql = "SELECT * FROM users";
 		$stmt = $this->conn->prepare($sql);

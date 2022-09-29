@@ -1,7 +1,7 @@
 <?php 
 	session_start();
-	define('PAGE_TITLE', 'Login - Root Jobs')
-	include_once '../templates/header.php'
+	define('PAGE_TITLE', 'Login - Root Jobs');
+	include_once '../templates/header.php';
 ?>
 	<div class="p-3">
 		<div class="mx-auto mt-5" style="max-width: 30rem;">
