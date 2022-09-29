@@ -1,5 +1,5 @@
 <?php 
-	$page_title = 'Signup - Root Jobs';
+	define('PAGE_TITLE', 'Signup - Root Jobs');
 	include_once '../templates/header.php'
 ?>
 	<div class="p-3">

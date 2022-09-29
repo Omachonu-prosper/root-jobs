@@ -1,5 +1,5 @@
 <?php 
-	$page_title = '404 not Found - Root Jobs';
+	define('PAGE_TITLE', '404 Not Found - Root Jobs');
 	include_once '../templates/header.php'
 ?>
 

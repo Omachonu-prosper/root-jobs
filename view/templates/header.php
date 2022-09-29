@@ -15,7 +15,7 @@
 
     	<title>
     		<?php 
-    			if(isset($page_title)) { echo $page_title; }
+    			if(PAGE_TITLE !== Null) { echo PAGE_TITLE; }
     			else { echo 'Root Jobs!'; }
     		?>
     	</title>

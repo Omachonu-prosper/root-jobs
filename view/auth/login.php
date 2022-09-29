@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$page_title = 'Login - Root Jobs';
+	define('PAGE_TITLE', 'Login - Root Jobs')
 	include_once '../templates/header.php'
 ?>
 	<div class="p-3">

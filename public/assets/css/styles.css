@@ -27,3 +27,35 @@ a:hover {
     border-color: var(--primary-color);
     background-color: var(--primary-color);
 }
+
+/* Make dropdows that extend outside the page especially the dropdown on the navbar */
+.pull-dropdown-leftward {
+    left: unset;
+    right: 0;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+.account-header span i {
+    font-size: 10rem;
+}
+
+.shadowed-card {
+    border: none;
+    box-shadow: 2px 0rem 1rem 0rem rgb(0 0 0 / 10%);
+}
