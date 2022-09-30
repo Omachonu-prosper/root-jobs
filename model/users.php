@@ -42,6 +42,14 @@ class Users extends Connection {
 				]);
 	}
 
+	public function deleteUser($id) {
+		$sql = "DELETE FROM users WHERE id = :id";
+		$stmt = $this->conn->prepare($sql);
+		$stmt->execute([
+					'id' => $id
+				]);
+	}
+
 	public function allUsers() {
 		$sql = "SELECT * FROM users";
 		$stmt = $this->conn->prepare($sql);

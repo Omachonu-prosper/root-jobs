@@ -9,7 +9,8 @@
 		header('location: /view/auth/login.php');
 	}
 
-	$page_title = 'Job feeds - Root Jobs';
+	// define('CURRENT_PAGE', 'account');
+	define('PAGE_TITLE', 'Feed - Root Jobs');
 	include_once '../templates/header.php';
 ?>
 

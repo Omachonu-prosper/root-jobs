@@ -124,6 +124,21 @@
 				<button type="submit" name="update_form_submit" class="btn btn-success">Update details</button>
 			</form>
 		</div>
+
+		<div class="my-5 text-danger card border-danger">
+			<div class="card-body">
+				<h2>Danger Zone <i class="fa fa-exclamation-triangle"></i></h2>
+				<div class="card-sub-title my-3">
+					Thread with caution. Actions you perform here can not be undone!
+				</div>
+
+				<form action="/controller/user/delete.php" method="post">
+					<button type="submit" name="account_delete_submit" class="btn btn-danger">
+						Delete account
+					</button>
+				</form>
+			</div>
+		</div>
 	</div>
 
 <?php include_once '../templates/footer.php' ?>
