@@ -59,3 +59,30 @@ a:hover {
     border: none;
     box-shadow: 2px 0rem 1rem 0rem rgb(0 0 0 / 10%);
 }
+
+.shown {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .57);
+    backdrop-filter: blur(2px);
+    transition: .5s all ease;
+}
+
+.popup-background-blur {
+    max-width: 30rem;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

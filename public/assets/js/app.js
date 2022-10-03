@@ -42,3 +42,17 @@ function confirmPassword() {
     });
   }, false);
 })();
+
+// Show the confirm delete dialogue when the user clicks the delte button
+$('#show-user-delete-confirmation-canvas').click(() => {
+  $('#user-delete-confirmation-canvas').removeClass('hidden');
+  $('#user-delete-confirmation-canvas').addClass('shown');
+
+  // A click on the background of the confirmation box or on the cancel button the box should be closed
+  $('#user-delete-confirmation-canvas').click(() => {
+    if(event.target.id == 'user-delete-confirmation-canvas' || event.target.id == 'cancel-user-delete') {
+      $('#user-delete-confirmation-canvas').removeClass('shown');
+      $('#user-delete-confirmation-canvas').addClass('hidden'); 
+    }
+  });
+});

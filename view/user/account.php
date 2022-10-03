@@ -132,11 +132,27 @@
 					Thread with caution. Actions you perform here can not be undone!
 				</div>
 
-				<form action="/controller/user/delete.php" method="post">
-					<button type="submit" name="account_delete_submit" class="btn btn-danger">
-						Delete account
-					</button>
-				</form>
+				<div class="popup-canvas hidden" id="user-delete-confirmation-canvas">
+					<div class="shadowed-card card popup-background-blur" id="confirm-user-delete">
+						<div class="card-body">
+							<p>You are about to delete your account "<?php echo $_SESSION['current_user']['username'] ?>". You can not undo this action and all your data will be removed. Are you sure you want to continue?</p>
+
+							<form action="/controller/user/delete.php" method="post">
+								<a href="#!" id="cancel-user-delete" class="btn btn-outline-success mr-3">
+									Cancel
+								</a>
+
+								<button type="submit" name="account_delete_submit" class="btn btn-outline-danger">
+									Confirm Delete
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<button type="submit" name="account_delete_submit" id="show-user-delete-confirmation-canvas" class="btn btn-danger">
+					Delete account
+				</button>
 			</div>
 		</div>
 	</div>
