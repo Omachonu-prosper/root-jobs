@@ -30,19 +30,7 @@
 	</div>
 
 	<div class="container mt-5" style="max-width: 50rem;">
-		<div class="card shadowed-card mb-5">
-			<div class="card-body">
-				<h3 class="card-title">Education <i class="fa fa-graduation-cap"></i></h3>
-
-				<div class="card-subtitle">
-					No education to show yet
-				</div>
-
-				<a class="mt-3 btn btn-outline-success">
-					Add Education <fa class="fa fa-plus"></fa>
-				</a>
-			</div>	
-		</div>
+		<?php include_once '../templates/user/education.php' ?>
 
 		<div class="card shadowed-card mb-5">
 			<div class="card-body">
@@ -52,9 +40,11 @@
 					No work experience to show yet
 				</div>
 
-				<a class="mt-3 btn btn-outline-success">
-					Add work experience <fa class="fa fa-plus"></fa>
-				</a>
+				<div>
+					<a class="mt-3 btn btn-outline-success">
+						Add work experience <fa class="fa fa-plus"></fa>
+					</a>
+				</div>
 			</div>	
 		</div>
 
@@ -72,110 +62,11 @@
 			</div>	
 		</div>
 
-		<div class="card shadowed-card mb-5">
-			<div class="card-body">
-				<h3 class="card-title">Likes and hobbies <i class="fa fa-smile-o"></i></h3>
+		<?php include_once '../templates/user/update.php' ?>
 
-				<div class="card-subtitle">
-					No likes and hobbies to show yet
-				</div>
-
-				<a class="mt-3 btn btn-outline-success">
-					Add likes and hobbies <fa class="fa fa-plus"></fa>
-				</a>
-			</div>	
-		</div>
-
-		<!-- User details update section -->
-		<div class="my-5">
-			<h2>Update account details</h2>
-
-			<form action="/controller/user/update.php" method="post" class="needs-validation" novalidate>
-				<div class="form-group">
-					<label for="fullname">Full name <span class="text-danger">*</span></label>
-					<input type="text" class="form-control" id="fullname" placeholder="John Doe" required name="update_form_fullname" minlength="3" value="<?php echo $_SESSION['current_user']['fullname'] ?>">
-
-					<div class="invalid-feedback">
-					    Your name cannot be less than 3 characters
-				    </div>
-				</div>
-
-				<div class="form-group">
-					<label for="username">Username <span class="text-danger">*</span></label>
-					<input type="text" class="form-control" id="username" placeholder="johndoe123" required name="update_form_username" minlength="5" maxlength="20" value="<?php echo $_SESSION['current_user']['username'] ?>">
-
-					<div class="invalid-feedback">
-					    Username must be between 5 to 20 characters
-				    </div>
-				</div>
-
-				<div class="form-group">
-					<label for="email">Email <span class="text-danger">*</span></label>
-					<input type="email" class="form-control" id="email" placeholder="johndoe@example.com" required name="update_form_email" value="<?php echo $_SESSION['current_user']['email'] ?>">
-
-					<div class="invalid-feedback">
-					    Please input a valid email
-				    </div>
-				</div>
-
-				<button type="submit" name="update_form_submit" class="btn btn-success">Update details</button>
-			</form>
-		</div>
-
-		<div class="my-5 text-danger card border-danger" id="delete-section">
-			<!-- Let the user know that the password they inputed is wrong -->
-			<?php if(isset($_SESSION['message_to_show'])) { ?>
-				<div class="alert alert-danger text-center mb-3">
-					<?php 
-						echo $_SESSION['message_to_show']; 
-						unset($_SESSION['message_to_show']);
-					?>
-
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-			<?php } ?>
-
-			<div class="card-body">
-				<h2>Danger Zone <i class="fa fa-exclamation-triangle"></i></h2>
-				<div class="card-sub-title my-3">
-					Thread with caution. Actions you perform here can not be undone!
-				</div>
-
-				<div class="popup-canvas hidden" id="user-delete-confirmation-canvas">
-					<div class="shadowed-card card popup-background-blur" id="confirm-user-delete">
-						<div class="card-body">
-							<p>
-								You are about to delete your account "<?php echo $_SESSION['current_user']['username'] ?>". You can not undo this action and all your data will be removed. Enter your password to continue?
-							</p>
-
-							<form action="/controller/user/delete.php" method="post" novalidate class="needs-validation">
-								<div class="form-group">
-									<input type="password" class="form-control" placeholder="Please enter your password" id="username" required name="account_delete_password">
-
-									<div class="invalid-feedback">
-									    Please enter a password
-								    </div>
-								</div>
-
-								<a href="#!" id="cancel-user-delete" class="btn btn-outline-success mr-3">
-									Cancel
-								</a>
-
-								<button type="submit" name="account_delete_submit" class="btn btn-outline-danger">
-									Confirm Delete
-								</button>
-							</form>
-						</div>
-					</div>
-				</div>
-
-				<button type="submit" name="account_delete_submit" id="show-user-delete-confirmation-canvas" class="btn btn-danger">
-					Delete account
-				</button>
-			</div>
-		</div>
+		<?php include_once '../templates/user/delete.php' ?>
 	</div>
+
+		
 
 <?php include_once '../templates/footer.php' ?>
