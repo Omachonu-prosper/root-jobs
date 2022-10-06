@@ -56,3 +56,23 @@ $('#show-user-delete-confirmation-canvas').click(() => {
     }
   });
 });
+
+// Adding educational qualification
+$('#add-education-button').click(() => {
+  // Show the form to add education
+  $('#add-education-form').removeClass('hidden');
+  $('#add-education-form').addClass('shown');
+
+  // Hide the add button so more forms can not be added
+  $('#add-education-button').addClass('hidden');
+});
+
+// Closing the form for adding a new educational status
+$('#close-education-form').click(() => {
+  // Hide the form
+  $('#add-education-form').removeClass('shown');
+  $('#add-education-form').addClass('hidden');
+
+  // show the add button
+  $('#add-education-button').removeClass('hidden');
+});

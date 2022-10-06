@@ -43,34 +43,34 @@ $all_education = $education->getUsersEducation($user['id']);
 			    <div class="card-body">
 			        <h4>Add educational qualification</h4>
 
-			        <form action="" class="form-row needs-validation" id="add-education-main-form" method="post" novalidate>
+			        <form action="../../controller/user/education/create.php" class="form-row needs-validation" id="add-education-main-form" method="post" novalidate>
 			          	<div class="form-group col-md-6">
 			            	<label for="institution">Institution <span class="text-danger">*</span></label>
-			            	<input type="text" class="form-control" id="institution" name="institution" placeholder="Where did you study?" required>
+			            	<input type="text" class="form-control" id="institution" name="education_form_institution" placeholder="Where did you study?" required>
 
 			            	<div class="invalid-feedback">You must provide the name of your school</div>
 			          	</div>
 
 			          	<div class="form-group col-md-6">
 			            	<label for="degree">Degree obtained <span class="text-danger">*</span></label>
-			            	<input type="text" class="form-control" id="degree" name="degree" placeholder="What degree did you obtain" required>
+			            	<input type="text" class="form-control" id="degree" name="education_form_degree" placeholder="What degree did you obtain" required>
 
 			            	<div class="invalid-feedback">You must provide a degree</div>
 			          	</div>
 
 			          	<div class="form-group col-md-4">
 				            <label for="start-date">Start Date <span class="text-danger">*</span></label>
-				            <input type="date" class="form-control" name="start-date" id="start-date" required>
+				            <input type="date" class="form-control" name="education_form_startdate" id="start-date" required>
 			          	</div>
 
 			          	<div class="form-group col-md-4">
 			            	<label for="end-date">End Date <span class="text-danger">*</span></label>
-			            	<input type="date" class="form-control" name="end-date" id="end-date" required>
+			            	<input type="date" class="form-control" name="education_form_enddate" id="end-date" required>
 			          	</div>
 
 			          	<div class="form-group col-md-4">
 			            	<label for="grade">Grade <span class="text-danger">*</span></label>
-			            	<select id="grade" class="custom-select" name="grade">
+			            	<select id="grade" class="custom-select" name="education_form_grade">
 			              		<option value="First-class">First class</option>
 			              		<option value="Second-class">Second class</option>
 			              		<option value="Third-class">Third class</option>
@@ -80,7 +80,7 @@ $all_education = $education->getUsersEducation($user['id']);
 
 			          	<div class="col-12">
 			            	<a class="mt-3 btn btn-outline-dark" id="close-education-form">Cancel</a>
-			            	<button type="submit" class="mt-3 btn btn-outline-success">Add education</button>
+			            	<button type="submit" name="education_form_submit" class="mt-3 btn btn-outline-success">Add education</button>
 			          	</div>
 			        </form>
 			    </div>
