@@ -1,0 +1,88 @@
+/* Root style variables */
+:root {
+    --primary-color: #1e7e34;
+}
+
+.green-text {
+    color: var(--primary-color);
+}
+
+.green-border {
+    border-color: var(--primary-color) !important;
+}
+
+a:hover {
+    color:  var(--primary-color);
+}
+
+/*Change the focus effect on all forms*/
+.custom-control-input:focus~.custom-control-label::before,
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgb(72 180 97 / 50%);
+}
+
+/* Change styles on custom radio buttons */
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+/* Make dropdows that extend outside the page especially the dropdown on the navbar */
+.pull-dropdown-leftward {
+    left: unset;
+    right: 0;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+.account-header span i {
+    font-size: 10rem;
+}
+
+.shadowed-card {
+    border: none;
+    box-shadow: 2px 0rem 1rem 0rem rgb(0 0 0 / 10%);
+}
+
+.shown {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .57);
+    backdrop-filter: blur(2px);
+    transition: .5s all ease;
+}
+
+.popup-background-blur {
+    max-width: 30rem;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

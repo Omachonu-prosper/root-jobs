@@ -1,13 +1,24 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
   	<head>
 	    <!-- Required meta tags -->
     	<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    	<!-- Bootstrap CSS -->
-    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    	<!-- Font awesome -->
+    	<link rel="stylesheet" type="text/css" href="/public/assets/font-awesome/css/font-awesome.min.css">
 
-    	<title>Hello, world!</title>
+    	<!-- Bootstrap CSS -->
+    	<link rel="stylesheet" type="text/css" href="/public/assets/css/bootstrap.min.css">
+    	<!-- Internal Stylesheet --> 
+    	<link rel="stylesheet" type="text/css" href="/public/assets/css/styles.css">
+
+    	<title>
+    		<?php 
+    			if(PAGE_TITLE !== Null) { echo PAGE_TITLE; }
+    			else { echo 'Root Jobs!'; }
+    		?>
+    	</title>
+    	
   	</head>
  <body>
